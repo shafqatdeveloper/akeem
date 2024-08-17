@@ -16,9 +16,9 @@ const VideoSection = () => {
     };
 
     return (
-        <div className='w-full h-screen flex items-center justify-center'>
+        <div className='w-full min-h-screen flex items-center justify-center'>
             {isVideoPlaying ? (
-                <div className='w-full h-full flex items-center justify-center bg-white'>
+                <div className='w-full h-[40vh] flex items-center justify-center bg-white'>
                     <div className='relative w-full h-4/5 sm:w-11/12 sm:h-11/12 md:w-5/6 md:h-5/6 flex items-center justify-center px-3 md:px-0'>
                         <video
                             className='w-full h-full'
