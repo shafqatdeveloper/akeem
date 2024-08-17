@@ -8,7 +8,7 @@ const Footer = () => {
     return (
         <div className='bg-black text-white px-5 md:px-0 pt-28 pb-10'>
             <div className='w-full flex items-center justify-center'>
-                <div className='hidden md:w-4/5 md:!grid md:grid-cols-4 xl:grid-cols-6 gap-3'>
+                <div className='hidden md:w-4/5 md:!grid md:grid-cols-4 gap-y-10 xl:grid-cols-6 gap-3'>
                     {/* Column 1 */}
                     <div>
                         <h1 className='text-2xl font-bold'>LOGO</h1>
@@ -73,7 +73,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className='hidden md:!flex items-center justify-center'>
-                <div className='flex md:w-4/5 items-center justify-between pt-10'>
+                <div className='flex md:w-4/5 md:flex-col gap-2 xl:flex-row items-center xl:justify-between pt-10'>
                     <div className='flex items-center gap-6'>
                         <div className='flex items-center gap-2.5'>
                             <FaLocationDot size={12} className='text-gray-200 border-b border-b-transparent' />
