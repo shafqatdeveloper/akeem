@@ -4,7 +4,7 @@ import { DiVim } from 'react-icons/di'
 import { FaGlobeAmericas } from 'react-icons/fa'
 import { FaLocationDot } from 'react-icons/fa6'
 import { MdKeyboardArrowDown } from 'react-icons/md'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import './Footer.css'
 
 const Footer = () => {
@@ -13,11 +13,12 @@ const Footer = () => {
     const [productsLinksOpen, setProductsLinksOpen] = useState(false)
     const [usefulLinksOpen, setUsefulLinksOpen] = useState(false)
     const [followUsLinksOpen, setFollowUsLinksOpen] = useState(false)
+    const location = useLocation()
     return (
         <div className='bg-black text-white px-3 md:px-0 pt-10 md:pt-28 pb-10'>
             {/* Desktop Footer */}
             <div className='w-full hidden md:!flex items-center justify-center'>
-                <div className=' md:w-4/5 md:!grid md:grid-cols-4 gap-y-10 xl:grid-cols-6 gap-3'>
+                <div className={location.pathname === "/en/discovery" ? ' md:w-[95%] md:!grid md:grid-cols-4 gap-y-10 xl:grid-cols-6 gap-3' : ' md:w-4/5 md:!grid md:grid-cols-4 gap-y-10 xl:grid-cols-6 gap-3'}>
                     {/* Column 1 */}
                     <div>
                         <h1 className='text-2xl font-bold'>LOGO</h1>
@@ -82,7 +83,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className='hidden md:!flex items-center justify-center'>
-                <div className='flex md:w-4/5 md:flex-col gap-2 xl:flex-row items-center xl:justify-between pt-10'>
+                <div className={location.pathname === "/en/discovery" ? 'flex md:w-[95%] md:flex-col gap-2 xl:flex-row items-center xl:justify-between pt-10' : 'flex md:w-4/5 md:flex-col gap-2 xl:flex-row items-center xl:justify-between pt-10'}>
                     <div className='flex items-center gap-6'>
                         <div className='flex items-center gap-2.5'>
                             <FaLocationDot size={12} className='text-gray-200 border-b border-b-transparent' />
