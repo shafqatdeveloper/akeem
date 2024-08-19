@@ -1,8 +1,29 @@
 .container {
     position: relative;
     height: 100px;
-    /* Adjust based on your design */
+    /* Default height */
     overflow: hidden;
+}
+
+/* Small devices (up to 767px) */
+@media (max-width: 767px) {
+    .container {
+        height: 200px;
+    }
+}
+
+/* Medium devices (768px to 991px) */
+@media (min-width: 600px) and (max-width: 991px) {
+    .container {
+        height: 100px;
+    }
+}
+
+/* Large devices (992px and up) */
+@media (min-width: 992px) {
+    .container {
+        height: 100px;
+    }
 }
 
 .paragraph {
