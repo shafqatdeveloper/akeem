@@ -12,13 +12,13 @@ const VideoSection = () => {
     };
 
     const handleCloseVideo = () => {
-        setIsVideoPlaying(false);
+        setIsVideoPlaying(false)
     };
 
     return (
-        <div className='w-full min-h-screen flex items-center justify-center'>
+        <div className='w-full min-h-screen flex items-center justify-center py-10'>
             {isVideoPlaying ? (
-                <div className='w-full h-[40vh] flex items-center justify-center bg-white'>
+                <div className='w-full h-[80vh] md:h-full flex items-center justify-center bg-white'>
                     <div className='relative w-full h-4/5 sm:w-11/12 sm:h-11/12 md:w-5/6 md:h-5/6 flex items-center justify-center px-3 md:px-0'>
                         <video
                             className='w-full h-full'
@@ -28,11 +28,11 @@ const VideoSection = () => {
                             <source src='path_to_your_video.mp4' type='video/mp4' />
                             Your browser does not support the video tag.
                         </video>
-                        <div className='bg-white absolute top-5 right-5 p-3 rounded-full'>
+                        <div onClick={handleCloseVideo} className='bg-white absolute top-5 cursor-pointer right-5 p-3 rounded-full'>
                             <RxCross1
                                 size={30}
-                                className=' text-black cursor-pointer'
-                                onClick={handleCloseVideo}
+                                className=' text-black'
+
                             />
                         </div>
                     </div>

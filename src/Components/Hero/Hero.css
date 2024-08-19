@@ -1,0 +1,29 @@
+.container {
+    position: relative;
+    height: 100px;
+    /* Adjust based on your design */
+    overflow: hidden;
+}
+
+.paragraph {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    left: -100%;
+    font-weight: bolder;
+    /* Start off-screen to the left */
+    transition: all 2.5s ease;
+}
+
+.slide-in {
+    opacity: 1;
+    left: 0;
+    font-weight: bolder;
+    /* Slide in to the left edge of the container */
+}
+
+.slide-out {
+    opacity: 0;
+    left: -100%;
+    /* Slide out to the left off the screen */
+}

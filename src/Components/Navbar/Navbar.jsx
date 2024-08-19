@@ -11,12 +11,12 @@ const Navbar = () => {
     const location = useLocation()
     return (
         <div className={location.pathname === "/en/discovery" && "shadow-md pb-3.5 md:pb-0 w-full"}>
-            <div className={location.pathname === "/en/discovery" ? 'flex items-center px-3 md:px-0 justify-center w-full py-3 text-black ' : 'flex items-center justify-center fixed top-0 left-0 w-full py-3 px-3 bg-white text-black z-50'}>
+            <div className={location.pathname === "/en/discovery" ? 'flex items-center px-3 md:px-0 justify-center w-full py-3 text-black ' : 'flex items-center justify-center fixed top-0 shadow-md left-0 w-full py-3 px-3 bg-white text-black z-50'}>
                 <div className={location.pathname === "/en/discovery" ? 'w-[95%] flex items-center justify-between' : 'w-[90%] md:w-4/5 flex items-center justify-between'}>
                     <div className='flex items-center gap-12'>
-                        <div>
+                        <Link to={'/'}>
                             LOGO
-                        </div>
+                        </Link>
                         <div className={location.pathname === "/en/discovery" ? "md:!flex hidden items-center gap-3 text-sky-600" : "hidden"}>
                             <div className='bg-sky-100 text-sky-600 rounded-full p-3'>
                                 <MdOutlineLocationOn />

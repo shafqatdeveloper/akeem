@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { FaLocationCrosshairs } from 'react-icons/fa6';
 import { MdLocationOn } from 'react-icons/md';
 import { ReactTyped } from 'react-typed';
+import './Hero.css'
 
 const Hero = () => {
     const [isInputSelected, setIsInputSelected] = useState(false);
@@ -44,20 +45,35 @@ const Hero = () => {
         };
     }, []);
 
+
+
+    const paragraphs = [
+        'Friends coming over?',
+        'Pre-order lunch for the office?',
+        'Discover and get great food.',
+        'Looking for something healthy?'
+    ];
+    const [index, setIndex] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setIndex((prevIndex) => (prevIndex + 1) % paragraphs.length);
+        }, 5000); // Change paragraph every 3000 ms
+        return () => clearInterval(interval);
+    }, []);
+
+
     return (
-        <div className='w-full h-screen bg-hero-bg-img bg-cover flex items-center md:justify-start justify-center'>
+        <div className='w-full h-screen bg-hero-bg-img bg-cover flex items-center md:justify-start justify-center mt-2'>
             <div className='md:pl-32 w-full md:w-3/5 lg:w-2/5 px-8 sm:px-32 md:px-0 font-bold font-sans md:pt-20'>
                 <div className='w-4/5 text-5xl h-52 pb-5 flex items-end'>
-                    <ReactTyped
-                        strings={[
-                            'Looking for Something Healthy',
-                            'Feeling Useless in the Kitchen?',
-                            'Craving Sushi'
-                        ]}
-                        typeSpeed={80}
-                        backSpeed={40}
-                        loop
-                    />
+                    <div className="container">
+                        {paragraphs.map((text, i) => (
+                            <div key={i} className={`paragraph ${index === i ? 'slide-in' : 'slide-out'}`}>
+                                {text}
+                            </div>
+                        ))}
+                    </div>
                 </div>
                 <div
                     ref={inputRef} // Attach the ref to the input div
