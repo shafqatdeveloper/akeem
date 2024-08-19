@@ -3,6 +3,16 @@ import { GiModernCity } from 'react-icons/gi'
 import { MdStorefront } from 'react-icons/md'
 import { RiRestaurantFill } from 'react-icons/ri'
 import PopularDeals from '../../Components/Deals/PopularDeals'
+import DiscountedDeals from '../../Components/Discounts/DiscountedDeals'
+import PromotionBanner from '../../Components/PromotionBanner/PromotionBanner'
+import LateLunchNearYou from '../../Components/LateLunch/LateLunch'
+import Popular from '../../Components/Popular/Popular'
+import HomeCooking from '../../Components/HomeCooking/HomeCooking'
+import FastestDelivery from '../../Components/FastestDelivery/FastestDelivery'
+import OffersNearYou from '../../Components/OffersNearYou/OfferNearYou'
+import Stores from '../../Components/Stores/Stores'
+import Best from '../../Components/BestOnWebsite/Best'
+import Brands from '../../Components/Brands/Brands'
 
 const Discovery = () => {
     const [selectedPage, setSelectedPage] = useState("discovery")
@@ -26,6 +36,50 @@ const Discovery = () => {
             {/* Deals Section */}
             <div className='w-full md:pt-7 pb-10'>
                 <PopularDeals />
+            </div>
+            {/* Discounted Deals Section */}
+            <div className='w-full md:pt-7 pb-10'>
+                <DiscountedDeals />
+            </div>
+            {/* Promotion Banner for free Delivey */}
+            <div className='w-full flex items-center justify-center md:pt-12 pb-10'>
+                <PromotionBanner />
+            </div>
+            {/* Late Lunch Near You */}
+            <div className='w-full flex items-center justify-center md:pt-12 pb-10'>
+                <LateLunchNearYou />
+            </div>
+            {/* Stores */}
+            <div className='w-full flex items-center justify-center md:pt-12 pb-10'>
+                <Stores />
+            </div>
+            {/* Best on Wesbite */}
+            <div className='w-full flex items-center justify-center md:pt-12 pb-10'>
+                <Best />
+            </div>
+
+
+            {/* Popular Right Now */}
+            <div className='w-full flex items-center justify-center md:pt-12 pb-10'>
+                <Popular />
+            </div>
+            {/* Home Cooking */}
+            <div className='w-full flex items-center justify-center md:pt-12 pb-10'>
+                <HomeCooking />
+            </div>
+            {/* Brands */}
+            <div className='w-full flex items-center justify-center md:pt-12 pb-10'>
+                <Brands />
+            </div>
+
+
+            {/* Fastest Delivery */}
+            <div className='w-full flex items-center justify-center md:pt-12 pb-10'>
+                <FastestDelivery />
+            </div>
+            {/* Offers near You */}
+            <div className='w-full flex items-center justify-center md:pt-12 pb-10'>
+                <OffersNearYou />
             </div>
         </div>
     )
