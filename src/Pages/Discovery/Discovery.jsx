@@ -17,7 +17,7 @@ import Brands from '../../Components/Brands/Brands'
 const Discovery = () => {
     const [selectedPage, setSelectedPage] = useState("discovery")
     return (
-        <div className='w-full'>
+        <div className='w-full pt-[7.5rem] md:pt-20'>
             {/* Pages */}
             <div className='w-full grid grid-cols-2 md:!flex px-5 sm:px-10 md:px-0 gap-2 items-center md:gap-6 justify-center py-5 text-gray-500'>
                 <div onClick={() => setSelectedPage("discovery")} className={`flex cursor-pointer items-center py-2 px-5 gap-2 ${selectedPage === "discovery" && "bg-sky-500 text-white rounded-full"}`}>
