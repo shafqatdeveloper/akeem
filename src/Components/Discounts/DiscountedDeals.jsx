@@ -39,7 +39,6 @@ const DiscountedDeals = () => {
                         <Swiper
                             modules={[Navigation]}
                             spaceBetween={15}
-                            loop={true}
                             speed={500} // Set transition speed to 800ms
                             effect="slide" // Default is "slide", you can change it to "fade", "cube", etc.
                             direction="horizontal"
